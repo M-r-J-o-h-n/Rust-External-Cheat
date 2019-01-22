@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Global">
+      <UniqueIdentifier>{7367a9ef-e776-43e4-a592-1825ede9bab4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hacks">
+      <UniqueIdentifier>{47126117-8b77-4ebb-b186-ba4d361b47aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Structs">
+      <UniqueIdentifier>{fa625877-0b3a-4ca4-83bd-6600c7027f1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Facilities">
+      <UniqueIdentifier>{4080cc46-0115-4c9a-bc87-cebb7a1d7a17}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Visual.cpp">
+      <Filter>Hacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers.cpp">
+      <Filter>Facilities</Filter>
+    </ClCompile>
+    <ClCompile Include="GOM.cpp">
+      <Filter>Facilities</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStructs.cpp">
+      <Filter>Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityUpdator.cpp">
+      <Filter>Facilities</Filter>
+    </ClCompile>
+    <ClCompile Include="CheatStructs.cpp">
+      <Filter>Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="Aimbot.cpp">
+      <Filter>Hacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Misc.cpp">
+      <Filter>Hacks</Filter>
+    </ClCompile>
+    <ClCompile Include="CheatManager.cpp">
+      <Filter>Hacks</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Globals.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Visual.h">
+      <Filter>Hacks</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStructs.h">
+      <Filter>Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="CheatStructs.h">
+      <Filter>Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers.h">
+      <Filter>Facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="GOM.h">
+      <Filter>Facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityUpdator.h">
+      <Filter>Facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Aimbot.h">
+      <Filter>Hacks</Filter>
+    </ClInclude>
+    <ClInclude Include="Misc.h">
+      <Filter>Hacks</Filter>
+    </ClInclude>
+    <ClInclude Include="CheatManager.h">
+      <Filter>Hacks</Filter>
+    </ClInclude>
+    <ClInclude Include="HackSetting.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
