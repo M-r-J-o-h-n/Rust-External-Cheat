@@ -75,7 +75,7 @@ HWND MakeOverlay()
 		WS_EX_TOPMOST | WS_EX_TRANSPARENT | WS_EX_LAYERED | WS_EX_NOACTIVATE,
 		L"3A09FB91-B7FE-4cf5-91F1-20D3832C6EB6",
 		NULL,
-		WS_POPUP | WS_VISIBLE, //WS_POP을 사용해야 논클라이언트 영역이 없어진다.
+		WS_POPUP | WS_VISIBLE, 
 		Rust::Globals::system_data.GameWindowRect.left,
 		Rust::Globals::system_data.GameWindowRect.top,
 		Rust::Globals::system_data.width,
