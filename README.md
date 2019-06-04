@@ -1,6 +1,6 @@
 # Rust-External-Cheat
 
-Written by lovdov
+Written by me
 
 Features
 
