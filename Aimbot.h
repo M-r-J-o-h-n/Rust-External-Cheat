@@ -28,12 +28,12 @@ namespace Rust {
 
 		float to_radian(float degree)
 		{
-			return degree * 3.141592f / 180.f;
+			return degree * 3.141592f / 180f;
 		}
 
 		float to_degree(float radian)
 		{
-			return radian * 180.f / 3.141592f;
+			return radian * 180f / 3.141592f;
 		}
 		
 		void Normalize(float& Yaw, float& Pitch) { // OnlyDegree // 위 일때 pitch 은 음수값 아래일때 pitch + 값 yaw 은 -360~360

@@ -9,7 +9,7 @@ Rust::Misc::Misc()
 
 	Rust::Globals::hack_setting.Misc.VelocityScale.enable = true;
 	Rust::Globals::hack_setting.Misc.VelocityScale.changed = true;
-	Rust::Globals::hack_setting.Misc.VelocityScale.multiplier = 100.f;
+	Rust::Globals::hack_setting.Misc.VelocityScale.multiplier = 100f;
 
 	Rust::Globals::hack_setting.Misc.FastGather.enable = true;
 	Rust::Globals::hack_setting.Misc.FastGather.changed = true;
@@ -86,13 +86,13 @@ void Rust::Misc::ModifyItems()
 			m_ModdedWeaponList[item] = recoil;
 
 			//no spread
-			RecoilSpread[0] = 0.f;
-			RecoilSpread[1] = 0.f;
+			RecoilSpread[0] = 0f;
+			RecoilSpread[1] = 0f;
 			//x0.2 recoil
 			RecoilSpread[2] *= 0.2f;
 			RecoilSpread[3] *= 0.2f;
 			//movement penalty;
-			RecoilSpread[5] = 0.f;
+			RecoilSpread[5] = 0f;
 
 			Rust::Globals::hack_data.RustMemory->WriteRaw(RecoilSpread, (void*)(RecoilProperties + 0x28), sizeof(RecoilSpread));
 		}

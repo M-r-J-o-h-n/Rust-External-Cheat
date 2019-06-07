@@ -20,8 +20,8 @@ bool Rust::MainCam::WorldToScreen(const XMFLOAT4X4 & ViewProjMatrix, const Cheat
 	float XXXX = XMVectorGetX(XMVector4Dot(right, pos)) + matrix._14;
 	float YYYY = XMVectorGetX(XMVector4Dot(up, pos)) + matrix._24;
 
-	screenpos.x = (int)(width / 2) * (1.f + XXXX / depth);
-	screenpos.y = (int)(height / 2) * (1.f - YYYY / depth);
+	screenpos.x = (int)(width / 2) * (1f + XXXX / depth);
+	screenpos.y = (int)(height / 2) * (1f - YYYY / depth);
 
 	return true;
 }
@@ -45,11 +45,11 @@ bool Rust::Helpers::WorldToScreen(const XMFLOAT4X4 & ViewProjMatrix, const Cheat
 	float XXXX = XMVectorGetX(XMVector4Dot(right, pos)) + matrix._14;
 	float YYYY = XMVectorGetX(XMVector4Dot(up, pos)) + matrix._24;
 
-	float fovXrad = fovX * 3.141592f / 180.f;
+	float fovXrad = fovX * 3.141592f / 180f;
 	float fovYrad = fovXrad * height / width;
 
-	screenpos.x = (int)(width / 2) * (1.f + XXXX  / depth);
-	screenpos.y = (int)(height / 2) * (1.f - YYYY / depth);
+	screenpos.x = (int)(width / 2) * (1f + XXXX  / depth);
+	screenpos.y = (int)(height / 2) * (1f - YYYY / depth);
 
 	return true;
 }
@@ -72,11 +72,11 @@ bool Rust::Helpers::WorldToScreenViewMatrix(const DirectX::XMFLOAT4X4 & ViewMatr
 	float XXXX = XMVectorGetX(XMVector4Dot(right, pos));
 	float YYYY = XMVectorGetX(XMVector4Dot(up, pos));
 
-	float fovXrad = fovX * 3.141592f / 180.f;
+	float fovXrad = fovX * 3.141592f / 180f;
 	float fovYrad = fovXrad * height / width;
 
-	screenpos.x = (int)(width / 2) * (1.f + XXXX / fovXrad / depth);
-	screenpos.y = (int)(height / 2) * (1.f - YYYY / fovYrad / depth);
+	screenpos.x = (int)(width / 2) * (1f + XXXX / fovXrad / depth);
+	screenpos.y = (int)(height / 2) * (1f - YYYY / fovYrad / depth);
 
 	return true;
 
@@ -89,9 +89,9 @@ bool Rust::Helpers::WorldToScreenTest(const DirectX::XMFLOAT4X4 & worldtoClipSpa
 	XMVECTOR worldPOS = XMLoadFloat4(&(XMFLOAT4)worldpos);
 	XMMATRIX viewproj = XMLoadFloat4x4(&viewProj);
 	XMVECTOR screenVec = DirectX::XMVector3Project(worldPOS, 0, 0, width, height,
-		0.1f, 3000.f, DirectX::XMMatrixIdentity(), viewproj, DirectX::XMMatrixIdentity());
+		0.1f, 3000f, DirectX::XMMatrixIdentity(), viewproj, DirectX::XMMatrixIdentity());
 
-	if (DirectX::XMVectorGetZ(screenVec) < 1.f)
+	if (DirectX::XMVectorGetZ(screenVec) < 1f)
 		return false;
 
 	DirectX::XMStoreFloat2((XMFLOAT2*)(&screenpos), screenVec);

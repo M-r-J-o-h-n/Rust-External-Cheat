@@ -16,12 +16,12 @@ Rust::Visual::Visual()
 
 	setting::ObjectSetting player;
 	player.color = D2D1::ColorF::Enum::Green;
-	player.distance = 250.f;
+	player.distance = 250f;
 	player.enable = true;
 
 	setting::ObjectSetting corpse;
 	corpse.color = D2D1::ColorF::Enum::LightSkyBlue;
-	corpse.distance = 50.f;
+	corpse.distance = 50f;
 	corpse.enable = true;
 
 	Rust::Globals::hack_setting.Visual.TaggedObjectSettingInfo[Rust::ObjectTag::PLAYER] = player;
@@ -29,32 +29,32 @@ Rust::Visual::Visual()
 
 	setting::ObjectSetting collectables;
 	collectables.color = D2D1::ColorF::Enum::LightCoral;
-	collectables.distance = 150.f;
+	collectables.distance = 150f;
 	collectables.enable = true;
 
 	setting::ObjectSetting ores;
 	ores.color = D2D1::ColorF::Enum::LightCyan;
-	ores.distance = 150.f;
+	ores.distance = 150f;
 	ores.enable = true;
 
 	setting::ObjectSetting foods;
 	foods.color = D2D1::ColorF::Enum::LightYellow;
-	foods.distance = 50.f;
+	foods.distance = 50f;
 	foods.enable = true;
 
 	setting::ObjectSetting constructions;
 	constructions.color = D2D1::ColorF::Enum::LightGray;
-	constructions.distance = 50.f;
+	constructions.distance = 50f;
 	constructions.enable = true;
 
 	setting::ObjectSetting loot;
 	loot.color = D2D1::ColorF::Enum::LightSkyBlue;
-	loot.distance = 150.f;
+	loot.distance = 150f;
 	loot.enable = true;
 
 	setting::ObjectSetting animals;
 	animals.color = D2D1::ColorF::Enum::Lime;
-	animals.distance = 100.f;
+	animals.distance = 100f;
 	animals.enable = true;
 
 	Rust::Globals::hack_setting.Visual.ActiveObjectSettingInfo[Rust::CheatStruct::ActiveObject::Info::Type::animals] = animals;
@@ -65,8 +65,8 @@ Rust::Visual::Visual()
 	Rust::Globals::hack_setting.Visual.ActiveObjectSettingInfo[Rust::CheatStruct::ActiveObject::Info::Type::ores] = ores;
 
 
-	Rust::Globals::hack_setting.Visual.TAGGED_OBJECT_CATCH_DISTANCE = 300.f;
-	Rust::Globals::hack_setting.Visual.ACTIVE_OBJECT_CATCH_DISTANCE = 250.f;
+	Rust::Globals::hack_setting.Visual.TAGGED_OBJECT_CATCH_DISTANCE = 300f;
+	Rust::Globals::hack_setting.Visual.ACTIVE_OBJECT_CATCH_DISTANCE = 250f;
 }
 
 
@@ -102,9 +102,9 @@ void Rust::Visual::DrawTaggedObject()
 			float BoxHeight = player->ScreenPos.y - player->ScreenHeadPos.y;
 			float BoxWidth = BoxHeight / 1.5f;
 
-			if (BoxHeight < 5.f) {
-				BoxWidth = 5.f;
-				BoxHeight = 10.f;
+			if (BoxHeight < 5f) {
+				BoxWidth = 5f;
+				BoxHeight = 10f;
 			}
 
 			Vector4 Border;
@@ -119,7 +119,7 @@ void Rust::Visual::DrawTaggedObject()
 				Draw2DBox(Border, Rust::Globals::hack_setting.Visual.TaggedObjectSettingInfo[Rust::ObjectTag::PLAYER].color);
 
 			DrawHealthBar(player->Health, Border);
-			DrawNameAndDistance(player->Name, std::to_wstring(player->Distance).c_str(), { player->ScreenPos.x, player->ScreenPos.y + 15.f });
+			DrawNameAndDistance(player->Name, std::to_wstring(player->Distance).c_str(), { player->ScreenPos.x, player->ScreenPos.y + 15f });
 			DrawPlayerWeapon();
 			DrawRadar();
 		}
@@ -175,22 +175,22 @@ void Rust::Visual::DrawHealthBar(int health, const Cheat::Vector4 & Border)
 	float BoxHeight = Border.w - Border.y;
 	float BoxWIidth = Border.z - Border.x;
 
-	float HealthBarHeight = 0.f;
+	float HealthBarHeight = 0f;
 
-	HealthBarHeight = (BoxHeight / 100.f) * health;
+	HealthBarHeight = (BoxHeight / 100f) * health;
 
 	Vector4 BoxRect;
 	Vector4 BoxBorder;
 	float thickness = 5.0f;
 
-	BoxRect.x = Border.x - thickness - 3.f;
+	BoxRect.x = Border.x - thickness - 3f;
 	BoxRect.y = Border.w - HealthBarHeight;
-	BoxRect.z = Border.x - 3.f;
+	BoxRect.z = Border.x - 3f;
 	BoxRect.w = Border.w;
 
-	BoxBorder.x = Border.x - thickness - 3.f;
+	BoxBorder.x = Border.x - thickness - 3f;
 	BoxBorder.y = Border.y;
-	BoxBorder.z = Border.x - 3.f;
+	BoxBorder.z = Border.x - 3f;
 	BoxBorder.w = Border.w;
 
 	m_renderer.DrawRect(BoxBorder, 0.0000001f, D2D1::ColorF::Enum::Black, 1.0f, true, D2D1::ColorF::Enum::Black, 1.0f);
@@ -200,9 +200,9 @@ void Rust::Visual::DrawHealthBar(int health, const Cheat::Vector4 & Border)
 void Rust::Visual::DrawCorsshair(D2D1::ColorF::Enum color)
 {
 	float thickness = 1.2f;
-	float length = 13.f;
-	float width = Rust::Globals::system_data.width/2.f;
-	float height = Rust::Globals::system_data.height/2.f;
+	float length = 13f;
+	float width = Rust::Globals::system_data.width/2f;
+	float height = Rust::Globals::system_data.height/2f;
 
 	Cheat::Vector4 H = {
 		width - length,

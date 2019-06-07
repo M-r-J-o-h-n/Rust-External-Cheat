@@ -8,7 +8,7 @@ Rust::Aimbot::Aimbot()
 {
 	Rust::Globals::hack_setting.Aimbot.enable = true;
 	Rust::Globals::hack_setting.Aimbot.prediction = true;
-	Rust::Globals::hack_setting.Aimbot.fov = 400.f;
+	Rust::Globals::hack_setting.Aimbot.fov = 400f;
 }
 
 
@@ -52,8 +52,8 @@ void Rust::Aimbot::exec()
 
 bool Rust::Aimbot::FindTarget()
 {
-	float CurrentNearDistance = 10000.f;
-	Cheat::Vector2 ScreenMiddle = { Rust::Globals::system_data.width/2.f, Rust::Globals::system_data.height / 2.f }; // rect 좌표로 하지 말 것 왜냐하면 world2screen 값은 오프셋이기 때문
+	float CurrentNearDistance = 10000f;
+	Cheat::Vector2 ScreenMiddle = { Rust::Globals::system_data.width/2f, Rust::Globals::system_data.height / 2f }; // rect 좌표로 하지 말 것 왜냐하면 world2screen 값은 오프셋이기 때문
 
 	Rust::CheatStruct::Player* pTarget = NULL;
 	for (const auto& PlayerObject : Rust::Globals::hack_data.TaggedObject.map) {
